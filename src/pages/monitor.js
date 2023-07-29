@@ -2,7 +2,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import Component from "@/components/UI/Component";
 import React from "react";
 
-const StorageDevicePage = ({ specificComponents, categoryName }) => {
+const MonitorPage = ({ specificComponents, categoryName }) => {
   return (
     <div>
       <Component
@@ -13,9 +13,9 @@ const StorageDevicePage = ({ specificComponents, categoryName }) => {
   );
 };
 
-export default StorageDevicePage;
+export default MonitorPage;
 
-StorageDevicePage.getLayout = function getLayout(page) {
+MonitorPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
@@ -24,11 +24,11 @@ export const getStaticProps = async () => {
   const data = await res.json();
   // Get all components
   const allComponents = data.data;
-  const categoryName = "Storage Device";
+  const categoryName = "Monitor";
 
   // Filter components with category
   const specificComponents = allComponents.filter(
-    (component) => component.category === "Storage Device"
+    (component) => component.category === "Monitor"
   );
 
   return {
