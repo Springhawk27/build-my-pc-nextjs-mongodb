@@ -1,0 +1,901 @@
+{
+  "components": [
+    {
+      "image_url": "/images/cpu_image1.png",
+      "product_name": "AMD Ryzen 9 5900X",
+      "category": "CPU / Processor",
+      "status": "In Stock",
+      "price": 549.99,
+      "description": "The AMD Ryzen 9 5900X is a high-performance CPU...",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Ryzen 9 5900X",
+        "specification": "12 cores, 24 threads",
+        "socket": "AM4",
+        "clock_speed": "3.7 GHz (base) - 4.8 GHz (max boost)",
+        "tdp": "105W"
+      },
+      "individual_rating": 4.9,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "An absolute beast of a processor!"
+        },
+        {
+          "rating": 5,
+          "comment": "Handles multitasking like a champ!"
+        },
+        {
+          "rating": 4,
+          "comment": "Great performance, but a bit expensive."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/cpu_image2.png",
+      "product_name": "Intel Core i9-11900K",
+      "category": "CPU / Processor",
+      "status": "In Stock",
+      "price": 599.99,
+      "description": "The Intel Core i9-11900K is a powerful CPU...",
+      "key_features": {
+        "brand": "Intel",
+        "model": "Core i9-11900K",
+        "specification": "8 cores, 16 threads",
+        "socket": "LGA 1200",
+        "clock_speed": "3.5 GHz (base) - 5.3 GHz (max turbo)",
+        "tdp": "125W"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Excellent performance for gaming and workloads!"
+        },
+        {
+          "rating": 4,
+          "comment": "Runs a bit hot, but still impressive."
+        },
+        {
+          "rating": 4,
+          "comment": "Slightly expensive, but worth it."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/cpu_image3.png",
+      "product_name": "Intel Core i5-11600K",
+      "category": "CPU / Processor",
+      "status": "In Stock",
+      "price": 299.99,
+      "description": "The Intel Core i5-11600K is a mid-range CPU...",
+      "key_features": {
+        "brand": "Intel",
+        "model": "Core i5-11600K",
+        "specification": "6 cores, 12 threads",
+        "socket": "LGA 1200",
+        "clock_speed": "3.9 GHz (base) - 4.9 GHz (max turbo)",
+        "tdp": "125W"
+      },
+      "individual_rating": 4.5,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Solid performance for gaming and daily tasks."
+        },
+        {
+          "rating": 5,
+          "comment": "Affordable and reliable CPU!"
+        },
+        {
+          "rating": 4,
+          "comment": "Would recommend to budget gamers."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/motherboard_image1.jpeg",
+      "product_name": "ASUS ROG Strix X570-E Gaming",
+      "category": "Motherboard",
+      "status": "In Stock",
+      "price": 289.99,
+      "description": "The ASUS ROG Strix X570-E Gaming is a high-end motherboard...",
+      "key_features": {
+        "brand": "ASUS",
+        "model": "ROG Strix X570-E Gaming",
+        "form_factor": "ATX",
+        "socket": "AM4",
+        "memory_slots": "4x DDR4",
+        "storage_slots": "2x M.2, 8x SATA",
+        "usb_ports": "USB 3.2 Gen 2 Type-A/C",
+        "networking": "2.5Gb Ethernet, Wi-Fi 6",
+        "rgb_lighting": "Yes"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Top-notch motherboard for gaming enthusiasts!"
+        },
+        {
+          "rating": 5,
+          "comment": "Great overclocking capabilities."
+        },
+        {
+          "rating": 4,
+          "comment": "pricey but packed with features."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/motherboard_image2.jpeg",
+      "product_name": "GIGABYTE B450M DS3H",
+      "category": "Motherboard",
+      "status": "In Stock",
+      "price": 89.99,
+      "description": "The GIGABYTE B450M DS3H is a budget-friendly motherboard...",
+      "key_features": {
+        "brand": "GIGABYTE",
+        "model": "B450M DS3H",
+        "form_factor": "Micro ATX",
+        "socket": "AM4",
+        "memory_slots": "4x DDR4",
+        "storage_slots": "1x M.2, 4x SATA",
+        "usb_ports": "USB 3.1 Gen 1 Type-A",
+        "networking": "Gigabit Ethernet",
+        "rgb_lighting": "No"
+      },
+      "individual_rating": 4.2,
+      "average_rating": 4.0,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Good motherboard for a budget build."
+        },
+        {
+          "rating": 4,
+          "comment": "Decent features at an affordable price."
+        },
+        {
+          "rating": 4,
+          "comment": "Works well for everyday computing."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/motherboard_image3.png",
+      "product_name": "MSI MPG X570 GAMING PRO CARBON WIFI",
+      "category": "Motherboard",
+      "status": "In Stock",
+      "price": 269.99,
+      "description": "The MSI MPG X570 GAMING PRO CARBON WIFI is a gaming-oriented motherboard...",
+      "key_features": {
+        "brand": "MSI",
+        "model": "MPG X570 GAMING PRO CARBON WIFI",
+        "form_factor": "ATX",
+        "socket": "AM4",
+        "memory_slots": "4x DDR4",
+        "storage_slots": "2x M.2, 6x SATA",
+        "usb_ports": "USB 3.2 Gen 2 Type-A/C",
+        "networking": "2.5Gb Ethernet, Wi-Fi 6",
+        "rgb_lighting": "Yes"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Excellent gaming performance and Wi-Fi!"
+        },
+        {
+          "rating": 4,
+          "comment": "Stable and reliable for gaming sessions."
+        },
+        {
+          "rating": 5,
+          "comment": "Great aesthetics with RGB lighting."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/ram_image1.png",
+      "product_name": "Corsair Vengeance RGB Pro 16GB (2x8GB) DDR4 3200MHz",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": 139.99,
+      "description": "The Corsair Vengeance RGB Pro offers high-performance DDR4 memory...",
+      "key_features": {
+        "brand": "Corsair",
+        "model": "Vengeance RGB Pro",
+        "type": "DDR4",
+        "capacity": "16GB (2x8GB)",
+        "speed": "3200MHz",
+        "cas_latency": "16",
+        "rgb_lighting": "Yes"
+      },
+      "individual_rating": 4.6,
+      "average_rating": 4.5,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great memory kit with impressive RGB effects!"
+        },
+        {
+          "rating": 4,
+          "comment": "Reliable and fast RAM for gaming and productivity."
+        },
+        {
+          "rating": 5,
+          "comment": "The RGB lighting adds a nice touch to my build."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/ram_image2.png",
+      "product_name": "G.Skill Ripjaws V Series 32GB (2x16GB) DDR4 3600MHz",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": 229.99,
+      "description": "The G.Skill Ripjaws V Series offers high-capacity and fast DDR4 memory...",
+      "key_features": {
+        "brand": "G.Skill",
+        "model": "Ripjaws V Series",
+        "type": "DDR4",
+        "capacity": "32GB (2x16GB)",
+        "speed": "3600MHz",
+        "cas_latency": "18",
+        "rgb_lighting": "No"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great RAM for content creation and multitasking!"
+        },
+        {
+          "rating": 5,
+          "comment": "Fast and stable memory for heavy workloads."
+        },
+        {
+          "rating": 4,
+          "comment": "Wish it had RGB, but the performance is excellent."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/ram_image3.png",
+      "product_name": "Crucial Ballistix 8GB DDR4 3000MHz",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": 74.99,
+      "description": "The Crucial Ballistix DDR4 memory offers reliable performance...",
+      "key_features": {
+        "brand": "Crucial",
+        "model": "Ballistix",
+        "type": "DDR4",
+        "capacity": "8GB",
+        "speed": "3000MHz",
+        "cas_latency": "15",
+        "rgb_lighting": "No"
+      },
+      "individual_rating": 4.4,
+      "average_rating": 4.2,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Affordable and reliable memory for everyday use."
+        },
+        {
+          "rating": 4,
+          "comment": "Decent performance for the price."
+        },
+        {
+          "rating": 4,
+          "comment": "No RGB, but it gets the job done."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/psu_image1.png",
+      "product_name": "Corsair RM750x 750W 80+ Gold",
+      "category": "Power Supply Unit",
+      "status": "In Stock",
+      "price": 129.99,
+      "description": "The Corsair RM750x is a reliable and efficient power supply unit...",
+      "key_features": {
+        "brand": "Corsair",
+        "model": "RM750x",
+        "wattage": "750W",
+        "efficiency": "80+ Gold",
+        "modular": "Full Modular",
+        "fan_size": "135mm",
+        "connectors": "Fully Sleeved Cables"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great PSU with efficient power delivery!"
+        },
+        {
+          "rating": 5,
+          "comment": "Quiet operation and modular design are fantastic!"
+        },
+        {
+          "rating": 4,
+          "comment": "A bit pricey, but it's worth it for the quality."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/psu_image2.png",
+      "product_name": "EVGA 600 BQ 600W 80+ Bronze",
+      "category": "Power Supply Unit",
+      "status": "In Stock",
+      "price": 64.99,
+      "description": "The EVGA 600 BQ is a budget-friendly power supply unit...",
+      "key_features": {
+        "brand": "EVGA",
+        "model": "600 BQ",
+        "wattage": "600W",
+        "efficiency": "80+ Bronze",
+        "modular": "Semi Modular",
+        "fan_size": "120mm",
+        "connectors": "Semi Modular Cables"
+      },
+      "individual_rating": 4.5,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Affordable PSU that works as expected."
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for a semi-modular power supply."
+        },
+        {
+          "rating": 4,
+          "comment": "Good for budget builds, but not for heavy use."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/psu_image3.png",
+      "product_name": "Seasonic Focus GX-850 850W 80+ Gold",
+      "category": "Power Supply Unit",
+      "status": "In Stock",
+      "price": 159.99,
+      "description": "The Seasonic Focus GX-850 is a high-quality power supply unit...",
+      "key_features": {
+        "brand": "Seasonic",
+        "model": "Focus GX-850",
+        "wattage": "850W",
+        "efficiency": "80+ Gold",
+        "modular": "Full Modular",
+        "fan_size": "120mm",
+        "connectors": "Fully Sleeved Cables"
+      },
+      "individual_rating": 4.9,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Top-notch PSU with excellent efficiency!"
+        },
+        {
+          "rating": 5,
+          "comment": "Quiet and reliable power delivery."
+        },
+        {
+          "rating": 5,
+          "comment": "Worth the investment for a high-end build."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/storage_image1.png",
+      "product_name": "Samsung 970 EVO Plus 1TB NVMe SSD",
+      "category": "Storage Device",
+      "status": "In Stock",
+      "price": 189.99,
+      "description": "The Samsung 970 EVO Plus offers high-speed NVMe storage...",
+      "key_features": {
+        "brand": "Samsung",
+        "model": "970 EVO Plus",
+        "capacity": "1TB",
+        "interface": "NVMe PCIe Gen 3.0 x4",
+        "read_speed": "3,500 MB/s",
+        "write_speed": "3,300 MB/s"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Blazing fast storage for OS and applications!"
+        },
+        {
+          "rating": 5,
+          "comment": "Reliable and smooth performance."
+        },
+        {
+          "rating": 4,
+          "comment": "A bit pricey, but worth the speed boost."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/storage_image2.png",
+      "product_name": "WD Blue 2TB SATA III HDD",
+      "category": "Storage Device",
+      "status": "In Stock",
+      "price": 79.99,
+      "description": "The WD Blue offers high-capacity SATA III storage...",
+      "key_features": {
+        "brand": "WD",
+        "model": "Blue",
+        "capacity": "2TB",
+        "interface": "SATA III",
+        "rpm": "5400",
+        "cache": "64MB"
+      },
+      "individual_rating": 4.5,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Good storage for mass storage needs."
+        },
+        {
+          "rating": 5,
+          "comment": "Large capacity and reliable for backups."
+        },
+        {
+          "rating": 4,
+          "comment": "Decent performance for a standard HDD."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/storage_image3.png",
+      "product_name": "Crucial MX500 500GB SATA III SSD",
+      "category": "Storage Device",
+      "status": "In Stock",
+      "price": 89.99,
+      "description": "The Crucial MX500 offers a balance of performance and capacity...",
+      "key_features": {
+        "brand": "Crucial",
+        "model": "MX500",
+        "capacity": "500GB",
+        "interface": "SATA III",
+        "read_speed": "560 MB/s",
+        "write_speed": "510 MB/s"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great SSD for the price!"
+        },
+        {
+          "rating": 5,
+          "comment": "Fast and reliable storage solution."
+        },
+        {
+          "rating": 4,
+          "comment": "Works well for OS and essential programs."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/monitor_image1.png",
+      "product_name": "ASUS ROG Swift PG279Q",
+      "category": "Monitor",
+      "status": "In Stock",
+      "price": 699.99,
+      "description": "The ASUS ROG Swift PG279Q is a high-refresh-rate gaming monitor...",
+      "key_features": {
+        "brand": "ASUS",
+        "model": "ROG Swift PG279Q",
+        "screen_size": "27 inches",
+        "resolution": "2560x1440 (QHD)",
+        "panel_type": "IPS",
+        "refresh_rate": "165Hz",
+        "response_time": "4ms",
+        "adaptive_sync": "G-Sync",
+        "connectors": "DisplayPort, HDMI, USB 3.0"
+      },
+      "individual_rating": 4.9,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Top-tier gaming monitor with G-Sync!"
+        },
+        {
+          "rating": 5,
+          "comment": "Smooth visuals and vibrant colors."
+        },
+        {
+          "rating": 4,
+          "comment": "Expensive but worth it for gaming."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/monitor_image2.png",
+      "product_name": "LG 27UK850-W",
+      "category": "Monitor",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The LG 27UK850-W is a 4K UHD monitor with excellent color accuracy...",
+      "key_features": {
+        "brand": "LG",
+        "model": "27UK850-W",
+        "screen_size": "27 inches",
+        "resolution": "3840x2160 (4K UHD)",
+        "panel_type": "IPS",
+        "refresh_rate": "60Hz",
+        "response_time": "5ms",
+        "hdr_support": "Yes",
+        "connectors": "DisplayPort, HDMI, USB Type-C"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Excellent 4K monitor for productivity and media!"
+        },
+        {
+          "rating": 5,
+          "comment": "Accurate colors and good for photo editing."
+        },
+        {
+          "rating": 4,
+          "comment": "60Hz refresh rate might be limiting for some."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/monitor_image3.png",
+      "product_name": "AOC CQ32G1",
+      "category": "Monitor",
+      "status": "In Stock",
+      "price": 349.99,
+      "description": "The AOC CQ32G1 is an affordable 32-inch curved gaming monitor...",
+      "key_features": {
+        "brand": "AOC",
+        "model": "CQ32G1",
+        "screen_size": "32 inches",
+        "resolution": "2560x1440 (QHD)",
+        "panel_type": "VA",
+        "refresh_rate": "144Hz",
+        "response_time": "1ms",
+        "adaptive_sync": "AMD FreeSync",
+        "connectors": "HDMI, DisplayPort, VGA"
+      },
+      "individual_rating": 4.5,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Good budget monitor for gaming!"
+        },
+        {
+          "rating": 5,
+          "comment": "Curved screen enhances the gaming experience."
+        },
+        {
+          "rating": 4,
+          "comment": "Limited connectivity options, but value for the price."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/gpu_image1.png",
+      "product_name": "NVIDIA GeForce RTX 3080",
+      "category": "GPU",
+      "status": "In Stock",
+      "price": 799.99,
+      "description": "The NVIDIA GeForce RTX 3080 offers top-tier gaming performance...",
+      "key_features": {
+        "brand": "NVIDIA",
+        "model": "GeForce RTX 3080",
+        "memory": "10GB GDDR6X",
+        "memory_bus": "320-bit",
+        "cuda_cores": "8704",
+        "base_clock": "1440 MHz",
+        "boost_clock": "1710 MHz",
+        "connectors": "DisplayPort, HDMI"
+      },
+      "individual_rating": 4.9,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Monster of a GPU! Handles everything with ease."
+        },
+        {
+          "rating": 5,
+          "comment": "Amazing performance for 4K gaming!"
+        },
+        {
+          "rating": 4,
+          "comment": "Expensive, but it's the best for gaming enthusiasts."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/gpu_image2.png",
+      "product_name": "AMD Radeon RX 6700 XT",
+      "category": "GPU",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "The AMD Radeon RX 6700 XT offers great value for high-performance gaming...",
+      "key_features": {
+        "brand": "AMD",
+        "model": "Radeon RX 6700 XT",
+        "memory": "12GB GDDR6",
+        "memory_bus": "192-bit",
+        "Stream Processors": "2560",
+        "base_clock": "2321 MHz",
+        "boost_clock": "2581 MHz",
+        "connectors": "DisplayPort, HDMI"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Impressive GPU for 1440p gaming!"
+        },
+        {
+          "rating": 5,
+          "comment": "Great price-to-performance ratio!"
+        },
+        {
+          "rating": 4,
+          "comment": "Would've loved more VRAM, but it's still a solid choice."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/gpu_image3.png",
+      "product_name": "NVIDIA GeForce GTX 1660 Super",
+      "category": "GPU",
+      "status": "In Stock",
+      "price": 249.99,
+      "description": "The NVIDIA GeForce GTX 1660 Super is a reliable budget gaming GPU...",
+      "key_features": {
+        "brand": "NVIDIA",
+        "model": "GeForce GTX 1660 Super",
+        "memory": "6GB GDDR6",
+        "memory_bus": "192-bit",
+        "cuda_cores": "1408",
+        "base_clock": "1530 MHz",
+        "boost_clock": "1785 MHz",
+        "connectors": "DisplayPort, HDMI, DVI"
+      },
+      "individual_rating": 4.6,
+      "average_rating": 4.5,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Good budget GPU for 1080p gaming!"
+        },
+        {
+          "rating": 5,
+          "comment": "Handles most games at high settings."
+        },
+        {
+          "rating": 4,
+          "comment": "Solid choice for mid-range gaming PCs."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/mouse_image1.png",
+      "product_name": "Logitech G Pro Wireless",
+      "category": "Mouse",
+      "status": "In Stock",
+      "price": 129.99,
+      "description": "The Logitech G Pro Wireless is a top-tier gaming mouse...",
+      "key_features": {
+        "brand": "Logitech",
+        "model": "G Pro Wireless",
+        "sensor": "Hero 25K",
+        "dpi_range": "100 - 25,600",
+        "buttons": "6 programmable",
+        "battery_life": "Up to 60 hours",
+        "connectivity": "Wireless (USB receiver)"
+      },
+      "individual_rating": 4.9,
+      "average_rating": 4.8,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Best gaming mouse I've ever used!"
+        },
+        {
+          "rating": 5,
+          "comment": "Lightweight and precise for FPS games."
+        },
+        {
+          "rating": 4,
+          "comment": "A bit expensive, but worth it for competitive gaming."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/mouse_image2.png",
+      "product_name": "Razer DeathAdder V2",
+      "category": "Mouse",
+      "status": "In Stock",
+      "price": 69.99,
+      "description": "The Razer DeathAdder V2 is a popular gaming mouse...",
+      "key_features": {
+        "brand": "Razer",
+        "model": "DeathAdder V2",
+        "sensor": "Focus+ 20K",
+        "dpi_range": "100 - 20,000",
+        "buttons": "8 programmable",
+        "grip_style": "Palm grip",
+        "connectivity": "Wired (USB)"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Comfortable and accurate mouse!"
+        },
+        {
+          "rating": 5,
+          "comment": "Great for long gaming sessions."
+        },
+        {
+          "rating": 4,
+          "comment": "The software can be a bit finicky, but the mouse is solid."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/mouse_image3.png",
+      "product_name": "SteelSeries Rival 3",
+      "category": "Mouse",
+      "status": "In Stock",
+      "price": 39.99,
+      "description": "The SteelSeries Rival 3 is an affordable gaming mouse...",
+      "key_features": {
+        "brand": "SteelSeries",
+        "model": "Rival 3",
+        "sensor": "TrueMove Core",
+        "dpi_range": "100 - 8,500",
+        "buttons": "6 programmable",
+        "grip_style": "Claw and fingertip grip",
+        "connectivity": "Wired (USB)"
+      },
+      "individual_rating": 4.5,
+      "average_rating": 4.4,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Good budget gaming mouse!"
+        },
+        {
+          "rating": 5,
+          "comment": "Fits well for claw grip users."
+        },
+        {
+          "rating": 4,
+          "comment": "Solid performance for the price."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/keyboard_image1.png",
+      "product_name": "Corsair K95 RGB Platinum XT",
+      "category": "Keyboard",
+      "status": "In Stock",
+      "price": 199.99,
+      "description": "The Corsair K95 RGB Platinum XT is a high-end mechanical gaming keyboard...",
+      "key_features": {
+        "brand": "Corsair",
+        "model": "K95 RGB Platinum XT",
+        "switch_type": "Cherry MX Speed",
+        "backlighting": "Per-key RGB",
+        "media_keys": "Yes",
+        "connectivity": "Wired (USB)"
+      },
+      "individual_rating": 4.8,
+      "average_rating": 4.7,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Amazing keyboard with Cherry MX Speed switches!"
+        },
+        {
+          "rating": 5,
+          "comment": "Customizable RGB lighting is fantastic."
+        },
+        {
+          "rating": 4,
+          "comment": "Expensive, but it's the best mechanical keyboard I've used."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/keyboard_image2.png",
+      "product_name": "Razer Huntsman Mini",
+      "category": "Keyboard",
+      "status": "In Stock",
+      "price": 119.99,
+      "description": "The Razer Huntsman Mini is a compact and fast gaming keyboard...",
+      "key_features": {
+        "brand": "Razer",
+        "model": "Huntsman Mini",
+        "switch_type": "Razer Optical Clicky",
+        "backlighting": "Razer Chroma RGB",
+        "form_factor": "60%",
+        "connectivity": "Wired (USB-C)"
+      },
+      "individual_rating": 4.7,
+      "average_rating": 4.6,
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Compact and responsive keyboard!"
+        },
+        {
+          "rating": 5,
+          "comment": "Perfect for a minimalist setup."
+        },
+        {
+          "rating": 4,
+          "comment": "The keys are a bit loud, but the performance is great."
+        }
+      ]
+    },
+    {
+      "image_url": "/images/keyboard_image3.png",
+      "product_name": "HyperX Alloy FPS Pro",
+      "category": "Keyboard",
+      "status": "In Stock",
+      "price": 79.99,
+      "description": "The HyperX Alloy FPS Pro is a tenkeyless mechanical gaming keyboard...",
+      "key_features": {
+        "brand": "HyperX",
+        "model": "Alloy FPS Pro",
+        "switch_type": "Cherry MX Red",
+        "backlighting": "Red LED",
+        "form_factor": "Tenkeyless",
+        "connectivity": "Wired (USB)"
+      },
+      "individual_rating": 4.6,
+      "average_rating": 4.5,
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Solid tenkeyless keyboard for gaming."
+        },
+        {
+          "rating": 5,
+          "comment": "Cherry MX Red switches are perfect for gaming."
+        },
+        {
+          "rating": 4,
+          "comment": "No fancy RGB, but the build quality is excellent."
+        }
+      ]
+    }
+  ]
+}

@@ -1,18 +1,65 @@
 import {
   ShopOutlined,
-  MobileOutlined,
-  UserOutlined,
+  DesktopOutlined,
   GithubOutlined,
   LinkedinFilled,
   GoogleSquareFilled,
   TwitterSquareFilled,
+  SmileOutlined,
+  DownOutlined,
 } from "@ant-design/icons";
-import { Layout, Menu } from "antd";
+import { Button, Dropdown, Layout, Menu, Space } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 
 const RootLayout = ({ children }) => {
+  const items = [
+    {
+      key: "1",
+      label: (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.antgroup.com"
+        >
+          1st menu item
+        </a>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.aliyun.com"
+        >
+          2nd menu item (disabled)
+        </a>
+      ),
+      icon: <SmileOutlined />,
+      disabled: true,
+    },
+    {
+      key: "3",
+      label: (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.luohanacademy.com"
+        >
+          3rd menu item (disabled)
+        </a>
+      ),
+      disabled: true,
+    },
+    {
+      key: "4",
+      danger: true,
+      label: "a danger item",
+    },
+  ];
   return (
     <Layout>
       <Header
@@ -37,10 +84,29 @@ const RootLayout = ({ children }) => {
           </h1>
         </div>
         <div className={styles.menu_items}>
+          <Dropdown
+            menu={{
+              items,
+            }}
+          >
+            <a onClick={(e) => e.preventDefault()}>
+              <Space>
+                Hover me
+                <DownOutlined />
+              </Space>
+            </a>
+          </Dropdown>
+
           <Link href="/allProducts">
             <items>
               <ShopOutlined />
               All Products
+            </items>
+          </Link>
+          <Link href="/pcBuilder">
+            <items>
+              <DesktopOutlined />
+              PC Builder
             </items>
           </Link>
         </div>
