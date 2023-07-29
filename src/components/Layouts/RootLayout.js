@@ -18,46 +18,93 @@ const RootLayout = ({ children }) => {
     {
       key: "1",
       label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
+        <Link
+          href="/cpu"
+          style={{
+            color: "black",
+          }}
         >
-          1st menu item
-        </a>
+          Cpu / Processor
+        </Link>
       ),
     },
     {
       key: "2",
       label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.aliyun.com"
+        <Link
+          href="/motherboard"
+          style={{
+            color: "black",
+          }}
         >
-          2nd menu item (disabled)
-        </a>
+          Motherboard
+        </Link>
       ),
-      icon: <SmileOutlined />,
-      disabled: true,
     },
     {
       key: "3",
       label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.luohanacademy.com"
+        <Link
+          href="/ram"
+          style={{
+            color: "black",
+          }}
         >
-          3rd menu item (disabled)
-        </a>
+          Ram
+        </Link>
       ),
-      disabled: true,
     },
     {
       key: "4",
-      danger: true,
-      label: "a danger item",
+      label: (
+        <Link
+          href="/powersupply"
+          style={{
+            color: "black",
+          }}
+        >
+          Power Supply Unit
+        </Link>
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Link
+          href="/storagedevice"
+          style={{
+            color: "black",
+          }}
+        >
+          Storage Device
+        </Link>
+      ),
+    },
+    {
+      key: "6",
+      label: (
+        <Link
+          href="/monitor"
+          style={{
+            color: "black",
+          }}
+        >
+          Monitor
+        </Link>
+      ),
+    },
+    {
+      key: "7",
+      label: (
+        <Link
+          href="/gpu"
+          style={{
+            color: "black",
+          }}
+        >
+          GPU
+        </Link>
+      ),
     },
   ];
   return (
@@ -91,7 +138,7 @@ const RootLayout = ({ children }) => {
           >
             <a onClick={(e) => e.preventDefault()}>
               <Space>
-                Hover me
+                Category
                 <DownOutlined />
               </Space>
             </a>
@@ -103,7 +150,7 @@ const RootLayout = ({ children }) => {
               All Products
             </items>
           </Link>
-          <Link href="/pcBuilder">
+          <Link href="/pcbuilder">
             <items>
               <DesktopOutlined />
               PC Builder

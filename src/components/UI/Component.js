@@ -6,10 +6,12 @@ import {
   TagsOutlined,
   ProfileOutlined,
   StarOutlined,
+  VerticalRightOutlined,
+  VerticalLeftOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 
-const FeaturedComponents = ({ featuredComponents }) => {
+const Component = ({ specificComponents, categoryName }) => {
   const { Meta } = Card;
 
   return (
@@ -17,22 +19,25 @@ const FeaturedComponents = ({ featuredComponents }) => {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "50px",
-          margin: "30px 0px",
+          margin: "20px 0px",
+          color: "#450A0B",
         }}
+        className="lg:text-4xl md:text-2xl text-xl"
       >
-        #Featured Products
+        <VerticalRightOutlined /> Our Available {categoryName}{" "}
+        <VerticalLeftOutlined />
       </h1>
-      <Row
-        // gutter={{
-        //   xs: [8, 8],
-        //   sm: [12, 12],
-        //   md: [18, 18],
-        //   lg: [24, 24],
-        // }}
-        gutter={[12, 12]}
-      >
-        {featuredComponents?.map((component) => (
+      <div
+        className="line"
+        style={{
+          height: "3px",
+          margin: "10px 0",
+          background: "#450A0B",
+          width: "100%",
+        }}
+      ></div>
+      <Row gutter={[12, 12]}>
+        {specificComponents?.map((component) => (
           <Col
             key={component?._id}
             className="gutter-row"
@@ -153,4 +158,4 @@ const FeaturedComponents = ({ featuredComponents }) => {
   );
 };
 
-export default FeaturedComponents;
+export default Component;
