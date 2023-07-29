@@ -1,9 +1,10 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import AllComponents from "@/components/UI/AllComponents";
 import { Button } from "antd";
 import Head from "next/head";
 import React from "react";
 
-const HomePage = () => {
+const HomePage = ({ allComponents }) => {
   return (
     <>
       <Head>
@@ -15,6 +16,7 @@ const HomePage = () => {
       <h1 className="text-3xl font-bold underline text-slate-800 bg-yellow-200">
         Hello world!
       </h1>
+      <AllComponents allComponents={allComponents}></AllComponents>
     </>
   );
 };
@@ -23,4 +25,16 @@ export default HomePage;
 
 HomePage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:3001/api/components");
+  const data = await res.json();
+  // console.log(data);
+
+  return {
+    props: {
+      allComponents: data.data,
+    },
+  };
 };
