@@ -99,7 +99,6 @@ const Component = ({ specificComponents, categoryName }) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  //   justifyContent: "space-between",
                   alignItems: "center",
                   width: "100%",
                   color: "gray",
@@ -155,7 +154,6 @@ const Component = ({ specificComponents, categoryName }) => {
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              {/* <p>{news?.id}</p> */}
               <Link href={`/components/${component?._id}`}>
                 <Button
                   style={{

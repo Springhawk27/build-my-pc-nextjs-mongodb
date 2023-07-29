@@ -2,8 +2,9 @@ import { Button, Card, Col, Row, Tooltip } from "antd";
 import Image from "next/image";
 import {
   ArrowRightOutlined,
-  CalendarOutlined,
-  CommentOutlined,
+  DollarOutlined,
+  StarOutlined,
+  TagsOutlined,
   ProfileOutlined,
   VerticalRightOutlined,
   VerticalLeftOutlined,
@@ -85,44 +86,76 @@ const AllComponents = ({ allComponents }) => {
               <div
                 className="line"
                 style={{
-                  height: "5px",
+                  height: "3px",
                   margin: "20px 0",
-                  background: "#000",
+                  background: "#450A0B",
                   width: "100%",
                 }}
               ></div>
-              <p
+              <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-between",
+                  flexDirection: "column",
+                  alignItems: "center",
                   width: "100%",
                   color: "gray",
                   margin: "10px 0px",
                   fontSize: "12px",
                 }}
               >
-                <span>
-                  <CalendarOutlined /> {component?.price}
-                </span>
-                <span>
-                  <CommentOutlined /> {component?.status}
-                </span>
-                <span>
-                  <ProfileOutlined /> {component?.category}
-                </span>
-              </p>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    color: "gray",
+                    margin: "10px 0px",
+                    fontSize: "12px",
+                  }}
+                >
+                  <span className="text-green-600">
+                    <DollarOutlined /> {component?.price}
+                  </span>
+                  <span
+                    className={
+                      component?.status && component?.status === "In Stock"
+                        ? "text-green-600"
+                        : "text-red-500"
+                    }
+                  >
+                    <TagsOutlined />
+                    {component?.status}
+                  </span>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    width: "100%",
+                    color: "gray",
+                    margin: "10px 0px",
+                    fontSize: "12px",
+                  }}
+                >
+                  <span className="text-blue-800">
+                    <ProfileOutlined /> {component?.category}
+                  </span>
+                  <span className="text-orange-500">
+                    <StarOutlined /> {component?.individual_rating}
+                  </span>
+                </div>
+              </div>
               <p style={{ fontSize: "15px" }}>
                 {component?.description.length > 100
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              {/* <p>{news?.id}</p> */}
               <Link href={`/components/${component?._id}`}>
                 <Button
                   style={{
                     fontSize: "15px",
                     marginTop: "20px",
-                    backgroundColor: "black",
+                    backgroundColor: "#450A0B",
                     color: "white",
                     width: "100%",
                     padding: "2px 5px ",
@@ -131,7 +164,7 @@ const AllComponents = ({ allComponents }) => {
                     textAlign: "center",
                   }}
                 >
-                  Keep Reading <ArrowRightOutlined />
+                  Details <ArrowRightOutlined />
                 </Button>
               </Link>
             </Card>

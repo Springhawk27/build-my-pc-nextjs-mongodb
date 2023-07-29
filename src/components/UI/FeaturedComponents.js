@@ -99,7 +99,6 @@ const FeaturedComponents = ({ featuredComponents }) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  //   justifyContent: "space-between",
                   alignItems: "center",
                   width: "100%",
                   color: "gray",
@@ -154,7 +153,6 @@ const FeaturedComponents = ({ featuredComponents }) => {
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              {/* <p>{news?.id}</p> */}
               <Link href={`/components/${component?._id}`}>
                 <Button
                   style={{
