@@ -48,7 +48,7 @@ const Component = ({ specificComponents, categoryName }) => {
         className="line"
         style={{
           height: "3px",
-          margin: "10px 0",
+          margin: "10px 0 20px 0",
           background: "#450A0B",
           width: "100%",
         }}
@@ -64,7 +64,7 @@ const Component = ({ specificComponents, categoryName }) => {
             sm={12}
             md={8}
             lg={6}
-            xl={4}
+            xl={6}
           >
             <Card
               hoverable

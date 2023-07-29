@@ -1,5 +1,6 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import AllComponents from "@/components/UI/AllComponents";
+import FeaturedCategories from "@/components/UI/FeaturedCategories";
 import FeaturedComponents from "@/components/UI/FeaturedComponents";
 import { shuffleArray } from "@/utils/shuffleArray";
 import { Button } from "antd";
@@ -19,6 +20,9 @@ const HomePage = ({ featuredComponents }) => {
       <FeaturedComponents
         featuredComponents={featuredComponents}
       ></FeaturedComponents>
+      <FeaturedCategories
+        featuredComponents={featuredComponents}
+      ></FeaturedCategories>
     </>
   );
 };

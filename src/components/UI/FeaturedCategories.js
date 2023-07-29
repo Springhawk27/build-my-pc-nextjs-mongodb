@@ -12,7 +12,61 @@ import {
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-const FeaturedComponents = ({ featuredComponents }) => {
+const categories = {
+  data: [
+    {
+      id: 1,
+      image_url: "/images/cpu_image1.png",
+      category_name: "Processor",
+      route_name: "cpu",
+    },
+    {
+      id: 2,
+      image_url: "/images/motherboard_image1.png",
+      category_name: "Motherboard",
+      route_name: "motherboard",
+    },
+    {
+      id: 3,
+      image_url: "/images/ram_image1.png",
+      category_name: "RAM",
+      route_name: "ram",
+    },
+    {
+      id: 4,
+      image_url: "/images/psu_image1.png",
+      category_name: "Power Supply",
+      route_name: "powersupply",
+    },
+    {
+      id: 5,
+      image_url: "/images/storage_image1.png",
+      category_name: "Storage Device",
+      route_name: "storagedevice",
+    },
+
+    {
+      id: 6,
+      image_url: "/images/monitor_image1.png",
+      category_name: "Monitor",
+      route_name: "monitor",
+    },
+    // {
+    //   id: 7,
+    //   image_url: "/images/keyboard_image1.png",
+    //   category_name: "Keyboard",
+    //   route_name: "keyboard",
+    // },
+    // {
+    //   id: 8,
+    //   image_url: "/images/mouse_image1.png",
+    //   category_name: "Mouse",
+    //   route_name: "mouse",
+    // },
+  ],
+};
+
+const FeaturedCategories = ({ featuredComponents }) => {
   const { Meta } = Card;
 
   const [arrow, setArrow] = useState("Show");
@@ -42,7 +96,7 @@ const FeaturedComponents = ({ featuredComponents }) => {
         className="lg:text-4xl md:text-2xl text-xl"
       >
         <VerticalRightOutlined />
-        Featured Components
+        Featured Categories
         <VerticalLeftOutlined />
       </h1>
       <div
@@ -55,9 +109,9 @@ const FeaturedComponents = ({ featuredComponents }) => {
         }}
       ></div>
       <Row gutter={[12, 12]}>
-        {featuredComponents?.map((component) => (
+        {categories.data?.map((category) => (
           <Col
-            key={component?._id}
+            key={category?.id}
             className="gutter-row"
             //   span={6}
 
@@ -71,7 +125,7 @@ const FeaturedComponents = ({ featuredComponents }) => {
               hoverable
               cover={
                 <Image
-                  src={component?.image_url}
+                  src={category?.image_url}
                   width={500}
                   height={200}
                   responsive
@@ -81,10 +135,10 @@ const FeaturedComponents = ({ featuredComponents }) => {
             >
               <Tooltip
                 placement="top"
-                title={component?.product_name}
+                title={category?.category_name}
                 arrow={mergedArrow}
               >
-                <Meta title={component?.product_name} />
+                <Meta title={category?.category_name} />
               </Tooltip>{" "}
               <div
                 className="line"
@@ -95,65 +149,7 @@ const FeaturedComponents = ({ featuredComponents }) => {
                   width: "100%",
                 }}
               ></div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  width: "100%",
-                  color: "gray",
-                  margin: "10px 0px",
-                  fontSize: "12px",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    width: "100%",
-                    color: "gray",
-                    margin: "10px 0px",
-                    fontSize: "12px",
-                  }}
-                >
-                  <span className="text-green-600">
-                    <DollarOutlined /> {component?.price}
-                  </span>
-                  <span
-                    className={
-                      component?.status && component?.status === "In Stock"
-                        ? "text-green-600"
-                        : "text-red-500"
-                    }
-                  >
-                    <TagsOutlined />
-                    {component?.status}
-                  </span>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    width: "100%",
-                    color: "gray",
-                    margin: "10px 0px",
-                    fontSize: "12px",
-                  }}
-                >
-                  <span className="text-blue-800">
-                    <ProfileOutlined /> {component?.category}
-                  </span>
-                  <span className="text-orange-500">
-                    <StarOutlined /> {component?.individual_rating}
-                  </span>
-                </div>
-              </div>
-              <p style={{ fontSize: "12px" }}>
-                {component?.description.length > 100
-                  ? component?.description.slice(0, 70) + "..."
-                  : component?.description}
-              </p>
-              <Link href={`/components/${component?._id}`}>
+              <Link href={`/${category?.route_name}`}>
                 <Button
                   style={{
                     fontSize: "15px",
@@ -167,7 +163,7 @@ const FeaturedComponents = ({ featuredComponents }) => {
                     textAlign: "center",
                   }}
                 >
-                  Details <ArrowRightOutlined />
+                  Sell All <ArrowRightOutlined />
                 </Button>
               </Link>
             </Card>
@@ -178,4 +174,4 @@ const FeaturedComponents = ({ featuredComponents }) => {
   );
 };
 
-export default FeaturedComponents;
+export default FeaturedCategories;
