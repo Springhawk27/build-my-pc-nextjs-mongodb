@@ -145,11 +145,11 @@ const RootLayout = ({ children }) => {
             </a>
           </Dropdown>
 
-          <Link href="/allProducts">
+          <Link href="/allcomponents">
             <items>
               <Space>
                 <ShopOutlined />
-                All Products
+                All Components
               </Space>
             </items>
           </Link>

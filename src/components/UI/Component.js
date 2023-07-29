@@ -36,7 +36,7 @@ const Component = ({ specificComponents, categoryName }) => {
       <h1
         style={{
           textAlign: "center",
-          margin: "20px 0px",
+          margin: "10px 0 20px 0",
           color: "#450A0B",
         }}
         className="lg:text-4xl md:text-2xl text-xl"

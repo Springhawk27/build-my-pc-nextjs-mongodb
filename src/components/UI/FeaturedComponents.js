@@ -6,6 +6,8 @@ import {
   TagsOutlined,
   ProfileOutlined,
   StarOutlined,
+  VerticalRightOutlined,
+  VerticalLeftOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -34,21 +36,25 @@ const FeaturedComponents = ({ featuredComponents }) => {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "50px",
-          margin: "30px 0px",
+          margin: "10px 0 20px 0",
+          color: "#450A0B",
         }}
+        className="lg:text-4xl md:text-2xl text-xl"
       >
-        #Featured Products
+        <VerticalRightOutlined />
+        Featured Components
+        <VerticalLeftOutlined />
       </h1>
-      <Row
-        // gutter={{
-        //   xs: [8, 8],
-        //   sm: [12, 12],
-        //   md: [18, 18],
-        //   lg: [24, 24],
-        // }}
-        gutter={[12, 12]}
-      >
+      <div
+        className="line"
+        style={{
+          height: "3px",
+          margin: "10px 0",
+          background: "#450A0B",
+          width: "100%",
+        }}
+      ></div>
+      <Row gutter={[12, 12]}>
         {featuredComponents?.map((component) => (
           <Col
             key={component?._id}
@@ -59,7 +65,7 @@ const FeaturedComponents = ({ featuredComponents }) => {
             sm={12}
             md={8}
             lg={6}
-            xl={4}
+            xl={6}
           >
             <Card
               hoverable

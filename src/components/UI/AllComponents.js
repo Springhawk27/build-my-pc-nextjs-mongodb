@@ -5,6 +5,8 @@ import {
   CalendarOutlined,
   CommentOutlined,
   ProfileOutlined,
+  VerticalRightOutlined,
+  VerticalLeftOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -33,22 +35,34 @@ const AllComponents = ({ allComponents }) => {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "50px",
-          margin: "30px 0px",
+          margin: "20px 0px",
+          color: "#450A0B",
         }}
+        className="lg:text-4xl md:text-2xl text-xl"
       >
-        #TODAY HIGHLIGHT
+        <VerticalRightOutlined /> All Our Available Components
+        <VerticalLeftOutlined />{" "}
       </h1>
-      <Row
-        gutter={{
-          xs: 8,
-          sm: 16,
-          md: 24,
-          lg: 32,
+      <div
+        className="line"
+        style={{
+          height: "3px",
+          margin: "10px 0 20px 0",
+          background: "#450A0B",
+          width: "100%",
         }}
-      >
+      ></div>
+      <Row gutter={[12, 12]}>
         {allComponents?.map((component) => (
-          <Col key={component?._id} className="gutter-row" span={6}>
+          <Col
+            key={component?._id}
+            className="gutter-row"
+            xs={24}
+            sm={12}
+            md={8}
+            lg={6}
+            xl={6}
+          >
             <Card
               hoverable
               cover={
