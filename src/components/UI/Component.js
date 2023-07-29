@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Tooltip } from "antd";
 import Image from "next/image";
 import {
   ArrowRightOutlined,
@@ -10,9 +10,26 @@ import {
   VerticalLeftOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 const Component = ({ specificComponents, categoryName }) => {
   const { Meta } = Card;
+
+  const [arrow, setArrow] = useState("Show");
+
+  const mergedArrow = useMemo(() => {
+    if (arrow === "Hide") {
+      return false;
+    }
+
+    if (arrow === "Show") {
+      return true;
+    }
+
+    return {
+      pointAtCenter: true,
+    };
+  }, [arrow]);
 
   return (
     <>
@@ -61,7 +78,13 @@ const Component = ({ specificComponents, categoryName }) => {
                 />
               }
             >
-              <Meta title={component?.product_name} />
+              <Tooltip
+                placement="top"
+                title={component?.product_name}
+                arrow={mergedArrow}
+              >
+                <Meta title={component?.product_name} />
+              </Tooltip>
               <div
                 className="line"
                 style={{

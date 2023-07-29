@@ -5,7 +5,7 @@ import {
   LinkedinFilled,
   GoogleSquareFilled,
   TwitterSquareFilled,
-  SmileOutlined,
+  TableOutlined,
   DownOutlined,
 } from "@ant-design/icons";
 import { Button, Dropdown, Layout, Menu, Space } from "antd";
@@ -138,6 +138,7 @@ const RootLayout = ({ children }) => {
           >
             <a onClick={(e) => e.preventDefault()}>
               <Space>
+                <TableOutlined />
                 Category
                 <DownOutlined />
               </Space>
@@ -146,14 +147,18 @@ const RootLayout = ({ children }) => {
 
           <Link href="/allProducts">
             <items>
-              <ShopOutlined />
-              All Products
+              <Space>
+                <ShopOutlined />
+                All Products
+              </Space>
             </items>
           </Link>
           <Link href="/pcbuilder">
             <items>
-              <DesktopOutlined />
-              PC Builder
+              <Space>
+                <DesktopOutlined />
+                PC Builder
+              </Space>
             </items>
           </Link>
         </div>

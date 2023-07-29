@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Tooltip } from "antd";
 import Image from "next/image";
 import {
   ArrowRightOutlined,
@@ -8,9 +8,26 @@ import {
   StarOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 const FeaturedComponents = ({ featuredComponents }) => {
   const { Meta } = Card;
+
+  const [arrow, setArrow] = useState("Show");
+
+  const mergedArrow = useMemo(() => {
+    if (arrow === "Hide") {
+      return false;
+    }
+
+    if (arrow === "Show") {
+      return true;
+    }
+
+    return {
+      pointAtCenter: true,
+    };
+  }, [arrow]);
 
   return (
     <>
@@ -56,7 +73,13 @@ const FeaturedComponents = ({ featuredComponents }) => {
                 />
               }
             >
-              <Meta title={component?.product_name} />
+              <Tooltip
+                placement="top"
+                title={component?.product_name}
+                arrow={mergedArrow}
+              >
+                <Meta title={component?.product_name} />
+              </Tooltip>{" "}
               <div
                 className="line"
                 style={{
@@ -66,7 +89,6 @@ const FeaturedComponents = ({ featuredComponents }) => {
                   width: "100%",
                 }}
               ></div>
-
               <div
                 style={{
                   display: "flex",
@@ -121,7 +143,6 @@ const FeaturedComponents = ({ featuredComponents }) => {
                   </span>
                 </div>
               </div>
-
               <p style={{ fontSize: "12px" }}>
                 {component?.description.length > 100
                   ? component?.description.slice(0, 70) + "..."
