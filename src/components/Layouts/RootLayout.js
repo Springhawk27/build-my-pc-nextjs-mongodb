@@ -12,8 +12,11 @@ import { Button, Dropdown, Layout, Menu, Space } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const RootLayout = ({ children }) => {
+  const { data: session } = useSession();
+
   const items = [
     {
       key: "1",
@@ -161,14 +164,27 @@ const RootLayout = ({ children }) => {
               </Space>
             </items>
           </Link>
-          <Link href="/login">
+
+          {session?.user ? (
             <items>
               <Space>
-                <DesktopOutlined />
-                Login
+                <Button
+                  className="ms-2"
+                  onClick={() => signOut()}
+                  type="text"
+                  danger
+                >
+                  Logout
+                </Button>
               </Space>
             </items>
-          </Link>
+          ) : (
+            <Link href="/login">
+              <Space>
+                <items>Login</items>
+              </Space>
+            </Link>
+          )}
         </div>
       </Header>
 

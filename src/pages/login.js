@@ -20,15 +20,14 @@ const LoginPage = () => {
             width: "20%",
           }}
         ></div>
-        <Button>
-          <GithubOutlined
-            onClick={() =>
-              signIn("github", {
-                callbackUrl: "http://localhost:3000/",
-              })
-            }
-          />{" "}
-          Github
+        <Button
+          onClick={() =>
+            signIn("github", {
+              callbackUrl: "http://localhost:3001/",
+            })
+          }
+        >
+          <GithubOutlined /> Github
         </Button>
       </div>
     </div>
