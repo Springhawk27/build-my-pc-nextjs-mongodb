@@ -1,9 +1,8 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import AllComponents from "@/components/UI/AllComponents";
+import Banner from "@/components/UI/Banner";
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
 import FeaturedComponents from "@/components/UI/FeaturedComponents";
 import { shuffleArray } from "@/utils/shuffleArray";
-import { Button } from "antd";
 import Head from "next/head";
 import React from "react";
 
@@ -16,6 +15,7 @@ const HomePage = ({ featuredComponents }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Banner></Banner>
 
       <FeaturedComponents
         featuredComponents={featuredComponents}
