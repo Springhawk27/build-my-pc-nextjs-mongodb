@@ -161,6 +161,14 @@ const RootLayout = ({ children }) => {
               </Space>
             </items>
           </Link>
+          <Link href="/login">
+            <items>
+              <Space>
+                <DesktopOutlined />
+                Login
+              </Space>
+            </items>
+          </Link>
         </div>
       </Header>
 
