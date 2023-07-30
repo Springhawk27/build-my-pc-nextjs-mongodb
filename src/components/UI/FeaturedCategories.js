@@ -90,7 +90,7 @@ const FeaturedCategories = ({ featuredComponents }) => {
       <h1
         style={{
           textAlign: "center",
-          margin: "10px 0 20px 0",
+          margin: "40px 0 20px 0",
           color: "#450A0B",
         }}
         className="lg:text-4xl md:text-2xl text-xl"
@@ -140,15 +140,6 @@ const FeaturedCategories = ({ featuredComponents }) => {
               >
                 <Meta title={category?.category_name} />
               </Tooltip>{" "}
-              <div
-                className="line"
-                style={{
-                  height: "3px",
-                  margin: "20px 0",
-                  background: "#450A0B",
-                  width: "100%",
-                }}
-              ></div>
               <Link href={`/${category?.route_name}`}>
                 <Button
                   style={{
@@ -163,7 +154,7 @@ const FeaturedCategories = ({ featuredComponents }) => {
                     textAlign: "center",
                   }}
                 >
-                  Sell All <ArrowRightOutlined />
+                  View All <ArrowRightOutlined />
                 </Button>
               </Link>
             </Card>
