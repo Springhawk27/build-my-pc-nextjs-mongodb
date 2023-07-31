@@ -10,7 +10,12 @@ const pcBuilderSlice = createSlice({
   initialState,
   reducers: {
     addToBuilder: (state, action) => {
-      state.components.push(action.payload);
+      const exists = state.components.find(
+        (component) => component._id === action.payload._id
+      );
+      if (!exists) {
+        state.components.push(action.payload);
+      }
     },
   },
 });

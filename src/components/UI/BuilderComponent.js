@@ -49,8 +49,8 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
   const dispatch = useDispatch();
 
   const handleAddComponent = (component) => {
-    // console.log(product);
     success(component);
+
     dispatch(addToBuilder(component));
   };
 
