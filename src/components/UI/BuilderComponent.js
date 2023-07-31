@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Tooltip } from "antd";
+import { Button, Card, Col, Row, Tooltip, message } from "antd";
 import Image from "next/image";
 import {
   DollarOutlined,
@@ -10,9 +10,14 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
+import { useRouter } from "next/router";
 
 const BuilderComponent = ({ specificComponents, categoryName }) => {
   const { Meta } = Card;
+
+  const router = useRouter();
 
   const [arrow, setArrow] = useState("Show");
 
@@ -30,8 +35,29 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
     };
   }, [arrow]);
 
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = (component) => {
+    messageApi.open({
+      type: "success",
+      content: `${component.product_name} Added To Builder`,
+    });
+    setTimeout(() => {
+      router.push("/pcbuilder");
+    }, 3000);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleAddComponent = (component) => {
+    // console.log(product);
+    success(component);
+    dispatch(addToBuilder(component));
+  };
+
   return (
     <>
+      {contextHolder}
+
       <h1
         style={{
           textAlign: "center",
@@ -153,23 +179,26 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              <Link href="/pcbuilder">
-                <Button
-                  style={{
-                    fontSize: "15px",
-                    marginTop: "20px",
-                    backgroundColor: "#450A0B",
-                    color: "white",
-                    width: "100%",
-                    padding: "2px 5px ",
-                    fontWeight: "300",
-                    letterSpacing: "3px",
-                    textAlign: "center",
-                  }}
-                >
-                  Select To Build
-                </Button>
-              </Link>
+              {/* <Link href="/pcbuilder"> */}
+              <Button
+                onClick={() => {
+                  handleAddComponent(component);
+                }}
+                style={{
+                  fontSize: "15px",
+                  marginTop: "20px",
+                  backgroundColor: "#450A0B",
+                  color: "white",
+                  width: "100%",
+                  padding: "2px 5px ",
+                  fontWeight: "300",
+                  letterSpacing: "3px",
+                  textAlign: "center",
+                }}
+              >
+                Select To Build
+              </Button>
+              {/* </Link> */}
             </Card>
           </Col>
         ))}
