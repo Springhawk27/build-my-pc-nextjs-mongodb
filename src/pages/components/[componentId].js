@@ -551,7 +551,7 @@ ComponentDetailPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3001/api/components");
+  const res = await fetch("http://localhost:3000/api/components");
 
   const components = await res.json();
 
@@ -567,7 +567,7 @@ export const getStaticProps = async (context) => {
   const componentId = params.componentId;
 
   const res = await fetch(
-    `http://localhost:3001/api/components/${componentId}`
+    `http://localhost:3000/api/components/${componentId}`
   );
   const data = await res.json();
   return {

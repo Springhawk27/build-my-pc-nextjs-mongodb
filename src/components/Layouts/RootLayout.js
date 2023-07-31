@@ -8,14 +8,32 @@ import {
   TableOutlined,
   DownOutlined,
 } from "@ant-design/icons";
-import { Button, Dropdown, Layout, Menu, Space } from "antd";
+import { Button, Dropdown, Layout, Menu, Space, Grid, Drawer } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useState } from "react";
 
 const RootLayout = ({ children }) => {
   const { data: session } = useSession();
+  const { useBreakpoint } = Grid;
+  const screens = useBreakpoint();
+
+  const [open, setOpen] = useState(false);
+  const [childrenDrawer, setChildrenDrawer] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+  const showChildrenDrawer = () => {
+    setChildrenDrawer(true);
+  };
+  const onChildrenDrawerClose = () => {
+    setChildrenDrawer(false);
+  };
 
   const items = [
     {
@@ -133,59 +151,135 @@ const RootLayout = ({ children }) => {
             </Link>
           </h1>
         </div>
-        <div className={styles.menu_items}>
-          <Dropdown
-            menu={{
-              items,
-            }}
-          >
-            <a onClick={(e) => e.preventDefault()}>
-              <Space>
-                <TableOutlined />
-                Category
-                <DownOutlined />
-              </Space>
-            </a>
-          </Dropdown>
+        {screens.md ? (
+          <div className={styles.menu_items}>
+            <Dropdown
+              menu={{
+                items,
+              }}
+            >
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  <TableOutlined />
+                  Category
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
 
-          <Link href="/allcomponents">
-            <items>
-              <Space>
-                <ShopOutlined />
-                All Components
-              </Space>
-            </items>
-          </Link>
-          <Link href="/pcbuilder">
-            <items>
-              <Space>
-                <DesktopOutlined />
-                PC Builder
-              </Space>
-            </items>
-          </Link>
-
-          {session?.user ? (
-            <items>
-              <Space>
-                <Button
-                  className="ms-2"
-                  onClick={() => signOut()}
-                  type="text"
-                  danger
-                >
-                  Logout
-                </Button>
-              </Space>
-            </items>
-          ) : (
-            <Link href="/login">
-              <Space>
-                <items>Login</items>
-              </Space>
+            <Link href="/allcomponents">
+              <items>
+                <Space>
+                  <ShopOutlined />
+                  All Components
+                </Space>
+              </items>
             </Link>
-          )}
-        </div>
+            <Link href="/pcbuilder">
+              <items>
+                <Space>
+                  <DesktopOutlined />
+                  PC Builder
+                </Space>
+              </items>
+            </Link>
+
+            {session?.user ? (
+              <items>
+                <Space>
+                  <Button
+                    className="ms-2 font-bold"
+                    onClick={() => signOut()}
+                    type="text"
+                    danger
+                  >
+                    Logout
+                  </Button>
+                </Space>
+              </items>
+            ) : (
+              <Link href="/login">
+                <Space>
+                  <items>Login</items>
+                </Space>
+              </Link>
+            )}
+          </div>
+        ) : (
+          <>
+            <div>
+              <Button
+                className="text-white font-bold text-xl"
+                type="text"
+                onClick={showDrawer}
+              >
+                Menu
+              </Button>
+            </div>
+
+            <Drawer
+              title="Menu"
+              width={500}
+              closable={false}
+              onClose={onClose}
+              open={open}
+            >
+              <div className="text-black flex flex-col gap-y-4">
+                <Dropdown
+                  menu={{
+                    items,
+                  }}
+                >
+                  <a onClick={(e) => e.preventDefault()}>
+                    <Space>
+                      <TableOutlined />
+                      Category
+                      <DownOutlined />
+                    </Space>
+                  </a>
+                </Dropdown>
+
+                <Link href="/allcomponents">
+                  <items>
+                    <Space>
+                      <ShopOutlined />
+                      All Components
+                    </Space>
+                  </items>
+                </Link>
+                <Link href="/pcbuilder">
+                  <items>
+                    <Space>
+                      <DesktopOutlined />
+                      PC Builder
+                    </Space>
+                  </items>
+                </Link>
+
+                {session?.user ? (
+                  <items>
+                    <Space>
+                      <Button
+                        className="ms-2 font-bold"
+                        onClick={() => signOut()}
+                        type="text"
+                        danger
+                      >
+                        Logout
+                      </Button>
+                    </Space>
+                  </items>
+                ) : (
+                  <Link href="/login">
+                    <Space>
+                      <items>Login</items>
+                    </Space>
+                  </Link>
+                )}
+              </div>
+            </Drawer>
+          </>
+        )}
       </Header>
 
       <Content

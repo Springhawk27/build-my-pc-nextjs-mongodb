@@ -20,7 +20,7 @@ StorageDevicePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3001/api/components");
+  const res = await fetch("http://localhost:3000/api/components");
   const data = await res.json();
   // Get all components
   const allComponents = data.data;
