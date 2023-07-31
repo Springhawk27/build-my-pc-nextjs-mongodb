@@ -1,7 +1,6 @@
 import { Button, Card, Col, Row, Tooltip } from "antd";
 import Image from "next/image";
 import {
-  ArrowRightOutlined,
   DollarOutlined,
   TagsOutlined,
   ProfileOutlined,
@@ -12,7 +11,7 @@ import {
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-const Component = ({ specificComponents, categoryName }) => {
+const BuilderComponent = ({ specificComponents, categoryName }) => {
   const { Meta } = Card;
 
   const [arrow, setArrow] = useState("Show");
@@ -154,7 +153,7 @@ const Component = ({ specificComponents, categoryName }) => {
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              <Link href={`/components/${component?._id}`}>
+              <Link href="/pcbuilder">
                 <Button
                   style={{
                     fontSize: "15px",
@@ -168,7 +167,7 @@ const Component = ({ specificComponents, categoryName }) => {
                     textAlign: "center",
                   }}
                 >
-                  Details <ArrowRightOutlined />
+                  Select To Build
                 </Button>
               </Link>
             </Card>
@@ -179,4 +178,4 @@ const Component = ({ specificComponents, categoryName }) => {
   );
 };
 
-export default Component;
+export default BuilderComponent;

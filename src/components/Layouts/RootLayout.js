@@ -297,7 +297,6 @@ const RootLayout = ({ children }) => {
           textAlign: "center",
         }}
       >
-        <div className={styles.line}></div>
         <h2
           style={{
             fontSize: "28px",
@@ -306,7 +305,7 @@ const RootLayout = ({ children }) => {
           buildMyPC
         </h2>
         <p className={styles.social_icons}>
-          <Link href="https://www.github.com/" target="_blank">
+          <Link href="https://github.com/Springhawk27" target="_blank">
             <GithubOutlined />
           </Link>
           <Link href="https://www.twitter.com/" target="_blank">
@@ -315,10 +314,14 @@ const RootLayout = ({ children }) => {
           <Link href="https://www.google.com/" target="_blank">
             <GoogleSquareFilled />
           </Link>
-          <Link href="https://www.linkedin.com/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/sajjad-mahmud-3852a316b/"
+            target="_blank"
+          >
             <LinkedinFilled />
           </Link>
         </p>
+        <div className={styles.line}></div>
         buildMyPC ©2023 Created by Sajjad Mahmud
       </Footer>
     </Layout>
