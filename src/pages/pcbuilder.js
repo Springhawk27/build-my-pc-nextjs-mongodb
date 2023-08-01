@@ -1,5 +1,5 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Image, List, Rate, Row, Tag, Tooltip } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,9 +7,14 @@ import { removeFromBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
 
 const PcBuilderPage = () => {
   const { components } = useSelector((state) => state.pcBuilder);
-  console.log(components);
+  // console.log(components);
 
   const dispatch = useDispatch();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  useEffect(() => {
+    setIsButtonDisabled(components.length < 5);
+  }, [components.length]);
 
   const cpu = components.find(
     (component) => component.category === "Processor"
@@ -402,6 +407,11 @@ const PcBuilderPage = () => {
                 }
               />
             </List.Item>
+            <div className="text-center py-4">
+              <Button type="primary" disabled={isButtonDisabled}>
+                Complete Build
+              </Button>
+            </div>
           </List>
         </Col>
       </Row>
