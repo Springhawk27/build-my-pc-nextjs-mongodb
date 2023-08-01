@@ -45,7 +45,7 @@ const ComponentDetailPage = ({ component }) => {
             className="w-full mb-20"
           />
         </Col>
-        <Col md={6} lg={12} style={{ paddingLeft: "20px" }}>
+        <Col sm={24} md={12} style={{ paddingLeft: "20px" }}>
           <h1 style={{ fontSize: "30px" }}>{component?.product_name}</h1>
           <span
             style={{

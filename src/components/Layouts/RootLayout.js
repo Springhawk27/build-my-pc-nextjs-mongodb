@@ -219,7 +219,7 @@ const RootLayout = ({ children }) => {
 
             <Drawer
               title="Menu"
-              width={500}
+              width={250}
               closable={false}
               onClose={onClose}
               open={open}
