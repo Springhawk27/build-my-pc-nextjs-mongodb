@@ -1,14 +1,15 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import BuilderComponent from "@/components/UI/BuilderComponent";
 import Component from "@/components/UI/Component";
 import React from "react";
 
 const StorageDevicePage = ({ specificComponents, categoryName }) => {
   return (
     <div>
-      <Component
+      <BuilderComponent
         specificComponents={specificComponents}
         categoryName={categoryName}
-      ></Component>
+      ></BuilderComponent>
     </div>
   );
 };

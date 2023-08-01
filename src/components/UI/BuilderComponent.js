@@ -41,9 +41,9 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
       type: "success",
       content: `${component.product_name} Added To Builder`,
     });
-    setTimeout(() => {
-      router.push("/pcbuilder");
-    }, 3000);
+    // setTimeout(() => {
+    //   router.push("/pcbuilder");
+    // }, 3000);
   };
 
   const dispatch = useDispatch();
@@ -179,26 +179,26 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
                   ? component?.description.slice(0, 70) + "..."
                   : component?.description}
               </p>
-              {/* <Link href="/pcbuilder"> */}
-              <Button
-                onClick={() => {
-                  handleAddComponent(component);
-                }}
-                style={{
-                  fontSize: "15px",
-                  marginTop: "20px",
-                  backgroundColor: "#450A0B",
-                  color: "white",
-                  width: "100%",
-                  padding: "2px 5px ",
-                  fontWeight: "300",
-                  letterSpacing: "3px",
-                  textAlign: "center",
-                }}
-              >
-                Select To Build
-              </Button>
-              {/* </Link> */}
+              <Link href="/pcbuilder">
+                <Button
+                  onClick={() => {
+                    handleAddComponent(component);
+                  }}
+                  style={{
+                    fontSize: "15px",
+                    marginTop: "20px",
+                    backgroundColor: "#450A0B",
+                    color: "white",
+                    width: "100%",
+                    padding: "2px 5px ",
+                    fontWeight: "300",
+                    letterSpacing: "3px",
+                    textAlign: "center",
+                  }}
+                >
+                  Select To Build
+                </Button>
+              </Link>
             </Card>
           </Col>
         ))}
