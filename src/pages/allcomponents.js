@@ -28,6 +28,14 @@ AllComponentsPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
+  // if (typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       allComponents: [],
+  //     },
+  //   };
+  // }
+
   const res = await fetch(`${process.env.URL}/api/components`);
   const data = await res.json();
   // console.log(data);

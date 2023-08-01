@@ -551,6 +551,12 @@ ComponentDetailPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
+  //   if (typeof window === "undefined") {
+  //     return {
+  //       paths: [],
+  //       fallback: false,
+  //     };
+  //   }
   const res = await fetch(`${process.env.URL}/api/components`);
 
   const components = await res.json();
@@ -563,12 +569,17 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
+  //   if (typeof window === "undefined") {
+  //     return {
+  //       props: {
+  //         component: {},
+  //       },
+  //     };
+  //   }
   const { params } = context;
   const componentId = params.componentId;
 
-  const res = await fetch(
-    `http://localhost:3000/api/components/${componentId}`
-  );
+  const res = await fetch(`${process.env.URL}/api/components/${componentId}`);
   const data = await res.json();
   return {
     props: {

@@ -21,6 +21,14 @@ GpuPage.getLayout = function getLayout(page) {
 };
 
 export const getServerSideProps = async () => {
+  // if (typeof window === "undefined") {
+  //    return {
+  //      props: {
+  //        specificComponents: [],
+  //        categoryName: "",
+  //      },
+  //    };
+  //  }
   const res = await fetch(`${process.env.URL}/api/components`);
   const data = await res.json();
   // Get all components
