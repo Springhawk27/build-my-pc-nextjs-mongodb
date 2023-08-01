@@ -1,6 +1,6 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import React, { useEffect, useState } from "react";
-import { Button, Col, Image, List, Rate, Row, Tag, message } from "antd";
+import { Button, Col, Image, List, Row, message } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
@@ -38,7 +38,8 @@ const PcBuilderPage = () => {
   const success = () => {
     messageApi.open({
       type: "success",
-      content: "Congratulations, You have completed the build",
+      // content: "Congratulations, You have completed the build",
+      content: `Congratulations, You have completed the build`,
     });
   };
 
