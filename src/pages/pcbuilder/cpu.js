@@ -20,7 +20,7 @@ CpuPage.getLayout = function getLayout(page) {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch("http://localhost:3000/api/components");
+  const res = await fetch(`${process.env.URL}/api/components`);
   const data = await res.json();
   // Get all components
   const allComponents = data.data;

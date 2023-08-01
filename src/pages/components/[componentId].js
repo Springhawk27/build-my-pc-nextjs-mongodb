@@ -34,7 +34,7 @@ const ComponentDetailPage = ({ component }) => {
       pointAtCenter: true,
     };
   }, [arrow]);
-  console.log(component, "chekcing");
+  //   console.log(component, "chekcing");
   return (
     <>
       <Row style={{ marginTop: "20px", alignItems: "center" }}>
@@ -551,7 +551,7 @@ ComponentDetailPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/components");
+  const res = await fetch(`${process.env.URL}/api/components`);
 
   const components = await res.json();
 
