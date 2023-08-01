@@ -1,6 +1,6 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import React, { useEffect, useState } from "react";
-import { Button, Col, Image, List, Rate, Row, Tag, Tooltip } from "antd";
+import { Button, Col, Image, List, Rate, Row, Tag, message } from "antd";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
@@ -34,8 +34,17 @@ const PcBuilderPage = () => {
     (component) => component.category === "Monitor"
   );
 
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: "success",
+      content: "Congratulations, You have completed the build",
+    });
+  };
+
   return (
     <div>
+      {contextHolder}
       <Row>
         <Col className="w-full mb-10 flex justify-center">
           <List
@@ -408,7 +417,11 @@ const PcBuilderPage = () => {
               />
             </List.Item>
             <div className="text-center py-4">
-              <Button type="primary" disabled={isButtonDisabled}>
+              <Button
+                onClick={success}
+                type="primary"
+                disabled={isButtonDisabled}
+              >
                 Complete Build
               </Button>
             </div>
