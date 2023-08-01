@@ -196,7 +196,7 @@ const BuilderComponent = ({ specificComponents, categoryName }) => {
                     textAlign: "center",
                   }}
                 >
-                  Select To Build
+                  Add To Builder
                 </Button>
               </Link>
             </Card>

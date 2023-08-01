@@ -23,7 +23,7 @@ const PcBuilderPage = () => {
   );
   const gpu = components.find((component) => component.category === "GPU");
   const powersupply = components.find(
-    (component) => component.category === "Power Supply"
+    (component) => component.category === "Power Supply Unit"
   );
   const monitor = components.find(
     (component) => component.category === "Monitor"
@@ -63,7 +63,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>CPU / Processor </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={cpu ? "block" : "hidden"}>
                       <Image
                         className={cpu ? "block" : "hidden"}
@@ -73,7 +73,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {cpu ? cpu?.product_name : "No Component Selected"}
                       </p>
                       <span className="text-green-600 ">
@@ -111,7 +115,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>Motherboard </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={motherboard ? "block" : "hidden"}>
                       <Image
                         className={motherboard ? "block" : "hidden"}
@@ -121,7 +125,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {motherboard
                           ? motherboard?.product_name
                           : "No Component Selected"}
@@ -159,7 +167,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>RAM </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={ram ? "block" : "hidden"}>
                       <Image
                         className={ram ? "block" : "hidden"}
@@ -169,7 +177,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {ram ? ram?.product_name : "No Component Selected"}
                       </p>
                       <span className="text-green-600 ">
@@ -207,7 +219,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>Storage Device </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={storagedevice ? "block" : "hidden"}>
                       <Image
                         className={storagedevice ? "block" : "hidden"}
@@ -217,7 +229,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {storagedevice
                           ? storagedevice?.product_name
                           : "No Component Selected"}
@@ -255,7 +271,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>GPU </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={gpu ? "block" : "hidden"}>
                       <Image
                         className={gpu ? "block" : "hidden"}
@@ -265,7 +281,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {gpu ? gpu?.product_name : "No Component Selected"}
                       </p>
                       <span className="text-green-600 ">
@@ -301,7 +321,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>Monitor </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={monitor ? "block" : "hidden"}>
                       <Image
                         className={monitor ? "block" : "hidden"}
@@ -311,7 +331,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {monitor
                           ? monitor?.product_name
                           : "No Component Selected"}
@@ -351,7 +375,7 @@ const PcBuilderPage = () => {
               <List.Item.Meta
                 title={<span>Power Supply </span>}
                 description={
-                  <div className="flex md:flex-row flex-col w-full">
+                  <div className="flex md:flex-row flex-col w-full gap-2">
                     <div className={powersupply ? "block" : "hidden"}>
                       <Image
                         className={powersupply ? "block" : "hidden"}
@@ -361,7 +385,11 @@ const PcBuilderPage = () => {
                       />
                     </div>
                     <div className="flex flex-col ">
-                      <p className="text-red-600 w-full">
+                      <p
+                        className={
+                          cpu ? "text-blue-600 w-full" : "text-red-600 w-full"
+                        }
+                      >
                         {powersupply
                           ? powersupply?.product_name
                           : "No Component Selected"}
